@@ -78,7 +78,7 @@ body{margin:0;}
 	.game-wrap{width:450px;height:650px;}
 	.game{width:440px;height:640px;}
 	.start-button{top:300px;}
-	.question{right:50%;transform:translatex(50%);top:435px;font-size:30px;width:240px;height:80px;}
+	.question{right:50%;transform:translatex(50%);top:435px;font-size:30px;width:220px;height:80px;}
 	.yes{right:65%;transform:translatex(35%);top:530px;}
 	.no{right:35%;transform:translatex(65%);top:530px;}
 	.replay{right:50%;transform:translatex(50%);}
