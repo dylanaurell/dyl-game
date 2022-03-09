@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Brain Game 1</title>
+		<link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1TTQqTpfiTrtffUdH6k7iRTRjH-tMbqYe"/>
+		<link rel="stylesheet" href="brain-game-1.css">
+		<script src="brain-game-1.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<button class="menu-button" onclick="menu_open()" tabindex="-1">
+				<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+					<path d="M 8 9 L 8 15 L 42 15 L 42 9 L 8 9 M 8 22 L 8 28 L 42 28 L 42 22 L 8 22 M 8 35 L 8 41 L 42 41 L 42 35 L 8 35">
+					</path>
+				</svg>
+			</button>
+			<a class="header-title-box" href="index.html" tabindex="-1">
+				<div class="header-title">Dyl Game</div>
+			</a>
+			<button class="dark-mode-button" onclick="dark_mode()" tabindex="-1">
+				<div class="dark-mode-off" id="dark-mode-off">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42 M 10 34 M 15 27 L 16 29 L 8 32 L 7 30 L 15 27 M 13 21 L 13 19 L 5 19 L 5 21 L 13 21 M 15 11 L 14 13 L 6 10 L 7 8 L 15 11 M 37 19 L 37 21 L 45 21 L 45 19 L 37 19 M 35 11 L 36 13 L 44 10 L 43 8 L 35 11 M 36 27 L 35 29 L 43 32 L 44 30 L 36 27">
+						</path>
+					</svg>
+				</div>
+				<div class="dark-mode-on" id="dark-mode-on">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42">
+						</path>
+					</svg>
+				</div>
+			</button>
+		</div>
+		<div class="header-block"></div>
+				<div class="menu" id="menu">
+			<div class="menu-home-setting">
+				<a class="menu-home" href="index.html">
+					<div class="menu-home-text">Home</div>
+				</a>
+				<div class="menu-setting">
+					<div class="menu-setting-text">Setting</div>
+				</div>
+			</div>
+			<div class="menu-content-wrap">
+				<div class="menu-content">
+					<a class="menu-content-link" href="brain-game-1.html">
+						<div class="menu-content-title">Brain Game 1</div>
+						<div class="menu-content-desc">Good For Brain</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-birthday.html">
+						<div class="menu-content-title">Guess Your Birthday</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu-outside" id="menu-outside" onclick="menu_close()"></div>
+		<div class="game-wrap">
+			<div class="game lose" id="lose">
+				<div class="lose-text">Sorry You Lose</div>
+				<div class="lose-restart-text">Restart The Game</div>
+				<div class="restart" onclick="restart()">
+					<div class="restart-text">RESTART</div>
+				</div>
+			</div>
+			<div class="game win" id="win">
+				<div class="lose-text">You Win</div>
+				<div class="lose-restart-text">Restart The Game</div>
+				<div class="restart" onclick="restart()">
+					<div class="restart-text">RESTART</div>
+				</div>
+			</div>
+			<div class="game g-start" id="g-start">
+				<div class="start-text">Click Start To Start The Game</div>
+				<div class="start-button" onclick="start()">
+					<div class="start-button-text">START</div>
+				</div>
+			</div>
+			<div class="game g1" id="g1">
+				<div class="question">Click The Red Square</div>
+				<div class="g1-square-red" onclick="g1_ok()"></div>
+				<div class="g1-square-yellow" onclick="g1_no()"></div>
+				<div class="g1-square-green" onclick="g1_no()"></div>
+				<div class="g1-rectangle-red" onclick="g1_no()"></div>
+				<div class="g1-rectangle-yellow" onclick="g1_no()"></div>
+				<div class="g1-rectangle-green" onclick="g1_no()"></div>
+			</div>
+			<div class="game g2" id="g2">
+				<div class="question">Don't Touch The Oval</div>
+				<div class="g2-oval-1" onclick="g2_no()"></div>
+				<div class="g2-oval-2" onclick="g2_no()"></div>
+				<div class="g2-oval-3" onclick="g2_no()"></div>
+				<div class="g2-oval-4" onclick="g2_no()"></div>
+				<div class="g2-oval-5" onclick="g2_no()"></div>
+				<div class="g2-circle" onclick="g2_ok()"></div>
+			</div>
+			<div class="game g3" id="g3">
+				<div class="question">Search The Invisible Key</div>
+				<div class="g3-key" onclick="g3_ok()"></div>
+			</div>
+			<div class="game g4" id="g4">
+				<div class="question">Click HERE</div>
+				<div class="g4-box-1" onclick="g4_no()">
+					<div class="g4-box-text">herE</div>
+				</div>
+				<div class="g4-box-2" onclick="g4_no()">
+					<div class="g4-box-text">Here</div>
+				</div>
+				<div class="g4-box-3" onclick="g4_no()">
+					<div class="g4-box-text">here</div>
+				</div>
+				<div class="g4-box-4" onclick="g4_no()">
+					<div class="g4-box-text">HEREE</div>
+				</div>
+				<div class="g4-box-5" onclick="g4_ok()">
+					<div class="g4-box-text">HERE</div>
+				</div>
+				<div class="g4-box-6" onclick="g4_no()">
+					<div class="g4-box-text">HeRe</div>
+				</div>
+			</div>
+			<div class="game g5l1" id="g5l1">
+				<div class="question">Click The Red Square 5 times</div>
+				<div class="g5l1-shape-1" onclick="g5l1_no()"></div>
+				<div class="g5l1-shape-2" onclick="g5l1_no()"></div>
+				<div class="g5l1-shape-3" onclick="g5l1_ok()"></div>
+				<div class="g5l1-shape-4" onclick="g5l1_no()"></div>
+				<div class="g5l1-shape-5" onclick="g5l1_no()"></div>
+				<div class="g5l1-shape-6" onclick="g5l1_no()"></div>
+			</div>
+			<div class="game g5l2" id="g5l2">
+				<div class="g5l2-shape-1" onclick="g5l2_no()"></div>
+				<div class="g5l2-shape-2" onclick="g5l2_no()"></div>
+				<div class="g5l2-shape-3" onclick="g5l2_ok()"></div>
+				<div class="g5l2-shape-4" onclick="g5l2_no()"></div>
+				<div class="g5l2-shape-5" onclick="g5l2_no()"></div>
+				<div class="g5l2-shape-6" onclick="g5l2_no()"></div>
+			</div>
+			<div class="game g5l3" id="g5l3">
+				<div class="g5l3-shape-1" onclick="g5l3_no()"></div>
+				<div class="g5l3-shape-2" onclick="g5l3_no()"></div>
+				<div class="g5l3-shape-3" onclick="g5l3_ok()"></div>
+				<div class="g5l3-shape-4" onclick="g5l3_no()"></div>
+				<div class="g5l3-shape-5" onclick="g5l3_no()"></div>
+				<div class="g5l3-shape-6" onclick="g5l3_no()"></div>
+			</div>
+			<div class="game g5l4" id="g5l4">
+				<div class="g5l4-shape-1" onclick="g5l4_no()"></div>
+				<div class="g5l4-shape-2" onclick="g5l4_no()"></div>
+				<div class="g5l4-shape-3" onclick="g5l4_ok()"></div>
+				<div class="g5l4-shape-4" onclick="g5l4_no()"></div>
+				<div class="g5l4-shape-5" onclick="g5l4_no()"></div>
+				<div class="g5l4-shape-6" onclick="g5l4_no()"></div>
+			</div>
+			<div class="game g5l5" id="g5l5">
+				<div class="g5l5-shape-1" onclick="g5l5_no()"></div>
+				<div class="g5l5-shape-2" onclick="g5l5_no()"></div>
+				<div class="g5l5-shape-3" onclick="g5l5_ok()"></div>
+				<div class="g5l5-shape-4" onclick="g5l5_no()"></div>
+				<div class="g5l5-shape-5" onclick="g5l5_no()"></div>
+				<div class="g5l5-shape-6" onclick="g5l5_no()"></div>
+			</div>
+			<div class="game g6" id="g6">
+				<div class="question">Find The Red Square</div>
+				<div class="g6-square-1" onclick="g6_ok()"></div>
+				<div class="g6-square-2" onclick="g6_no()"></div>
+				<div class="g6-square-3" onclick="g6_no()"></div>
+				<div class="g6-rectangle" onclick="g6_no()"></div>
+				<div class="g6-circle-1" onclick="g6_no()"></div>
+				<div class="g6-circle-2" onclick="g6_no()"></div>
+				<div class="g6-circle-3" onclick="g6_no()"></div>
+			</div>
+			<div class="game g7l1" id="g7l1">
+				<div class="question">Remember The Number<br>4-3-1-2</div>
+				<div class="g7-shape-1" onclick="g7l1_no()">
+					<div class="g7-shape-text">1</div>
+				</div>
+				<div class="g7-shape-2" onclick="g7l1_no()">
+					<div class="g7-shape-text">2</div>
+				</div>
+				<div class="g7-shape-3" onclick="g7l1_no()">
+					<div class="g7-shape-text">3</div>
+				</div>
+				<div class="g7-shape-4" onclick="g7l1_ok()">
+					<div class="g7-shape-text">4</div>
+				</div>
+			</div>
+			<div class="game g7l2" id="g7l2">
+				<div class="g7-shape-1" onclick="g7l2_no()">
+					<div class="g7-shape-text">1</div>
+				</div>
+				<div class="g7-shape-2" onclick="g7l2_no()">
+					<div class="g7-shape-text">2</div>
+				</div>
+				<div class="g7-shape-3" onclick="g7l2_ok()">
+					<div class="g7-shape-text">3</div>
+				</div>
+				<div class="g7-shape-4" onclick="g7l2_no()">
+					<div class="g7-shape-text">4</div>
+				</div>
+			</div>
+			<div class="game g7l3" id="g7l3">
+				<div class="g7-shape-1" onclick="g7l3_ok()">
+					<div class="g7-shape-text">1</div>
+				</div>
+				<div class="g7-shape-2" onclick="g7l3_no()">
+					<div class="g7-shape-text">2</div>
+				</div>
+				<div class="g7-shape-3" onclick="g7l3_no()">
+					<div class="g7-shape-text">3</div>
+				</div>
+				<div class="g7-shape-4" onclick="g7l3_no()">
+					<div class="g7-shape-text">4</div>
+				</div>
+			</div>
+			<div class="game g7l4" id="g7l4">
+				<div class="g7-shape-1" onclick="g7l4_no()">
+					<div class="g7-shape-text">3</div>
+				</div>
+				<div class="g7-shape-2" onclick="g7l4_ok()">
+					<div class="g7-shape-text">4</div>
+				</div>
+				<div class="g7-shape-3" onclick="g7l4_no()">
+					<div class="g7-shape-text">1</div>
+				</div>
+				<div class="g7-shape-4" onclick="g7l4_ok()">
+					<div class="g7-shape-text">2</div>
+				</div>
+			</div>
+			<div class="game g8" id="g8">
+				<div class="question">Click Here</div>
+				<div class="g8-shape-key" onclick="g8_ok()"></div>
+				<div class="g8-box-1" onclick="g8_no()">
+					<div class="g8-box-text">hErE</div>
+				</div>
+				<div class="g8-box-2" onclick="g8_no()">
+					<div class="g8-box-text">HerE</div>
+				</div>
+				<div class="g8-box-3" onclick="g8_no()">
+					<div class="g8-box-text">HERE</div>
+				</div>
+				<div class="g8-box-4" onclick="g8_no()">
+					<div class="g8-box-text">Here</div>
+				</div>
+				<div class="g8-box-5" onclick="g8_no()">
+					<div class="g8-box-text">HeRe</div>
+				</div>
+				<div class="g8-box-6" onclick="g8_no()">
+					<div class="g8-box-text">herE</div>
+				</div>
+			</div>
+			<div class="game g9" id="g9">
+				<div class="question">What Do You Think</div>
+				<div class="g9-button" onclick="g9_no()">
+					<div class="g9-button-text">Nuclear</div>
+				</div>  
+				<div class="g9-key" onclick="g9_ok()"></div>
+			</div>
+		</div>
+		<div class="game-block"></div>
+	</body>
+</html>
