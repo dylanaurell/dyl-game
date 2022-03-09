@@ -63,7 +63,7 @@ body{margin:0;}
 .nb{left:100px;}
 .nc{left:200px;}
 .nd{left:300px;}
-.question{position:absolute;right:20px;top:100px;font-size:35px;font-weight:bold;text-align:center;width:220px;height:80px;}
+.question{position:absolute;right:20px;top:100px;font-size:35px;font-weight:bold;text-align:center;}
 .yes{position:absolute;background-color:green;right:60px;width:150px;height:50px;top:200px;border-radius:30px;}
 .no{position:absolute;background-color:red;right:60px;width:150px;height:50px;top:270px;border-radius:30px;}
 .yes-no-text{position:absolute;top:50%;left:50%;transform:translatex(-50%)translatey(-50%);font-weight:bold;}
@@ -78,7 +78,7 @@ body{margin:0;}
 	.game-wrap{width:450px;height:650px;}
 	.game{width:440px;height:640px;}
 	.start-button{top:300px;}
-	.question{right:50%;transform:translatex(50%);top:435px;font-size:30px;}
+	.question{right:50%;transform:translatex(50%);top:435px;font-size:30px;width:220px;height:80px;}
 	.yes{right:65%;transform:translatex(35%);top:530px;}
 	.no{right:35%;transform:translatex(65%);top:530px;}
 	.replay{right:50%;transform:translatex(50%);}
