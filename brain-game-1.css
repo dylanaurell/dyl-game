@@ -1,4 +1,5 @@
 /*game*/
+.game-block{width:100%;height:420px;}
 .game-wrap{width:410px;height:410px;border:2px dashed black;position:absolute;left:50%;transform:translatex(-50%);}
 .game{margin:5px;width:400px;height:400px;position:absolute;background-color:white;cursor:default;}
 .question{font-size:25px;font-weight:bold;text-align:center;margin-top:10px;}
