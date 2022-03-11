@@ -8,7 +8,7 @@
 .result-replay{position:absolute;left:50%;transform:translatex(-50%);top:280px;padding:5px 10px;background:yellow;border-radius:10px;}
 .result-replay-text{font-weight:bold;font-size:22px;}
 .start{z-index:7;}
-.start-text{font-size:45px;text-align:center;position:absolute;top:70px;left:50%;transform:translatex(-50%);font-weight:bold;width:400px;}
+.start-text{font-size:45px;text-align:center;position:absolute;top:100px;left:50%;transform:translatex(-50%);font-weight:bold;width:400px;}
 .start-button{width:80px;height:80px;border-radius:50%;background-color:red;position:absolute;top:240px;left:50%;transform:translatex(-50%);}
 .start-button-text{font-weight:bold;text-align:center;margin-top:30px;}
 .replay{position:absolute;right:10px;bottom:10px;padding:5px 10px;background:yellow;border-radius:10px;}
@@ -38,7 +38,7 @@
 @media screen and (max-width:829px) {
 	.game-wrap{width:450px;height:686px;}
 	.game{width:440px;height:676px;}
-	.start-text{top:160px;}
+	.start-text{top:120px;}
 	.start-button{top:300px;}
 	.question{right:50%;transform:translatex(50%);top:435px;font-size:30px;width:300px;height:80px;}
 	.yes{right:65%;transform:translatex(35%);top:530px;}
