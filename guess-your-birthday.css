@@ -8,7 +8,7 @@
 .result-replay{position:absolute;left:50%;transform:translatex(-50%);top:280px;padding:5px 10px;background:yellow;border-radius:10px;}
 .result-replay-text{font-weight:bold;font-size:22px;}
 .start{z-index:7;}
-.start-text{font-size:45px;text-align:center;position:absolute;top:100px;left:50%;transform:translatex(-50%);font-weight:bold;width:430px;}
+.start-text{font-size:45px;text-align:center;position:absolute;top:100px;left:50%;transform:translatex(-50%);font-weight:bold;width:400px;}
 .start-button{width:80px;height:80px;border-radius:50%;background-color:red;position:absolute;top:240px;left:50%;transform:translatex(-50%);}
 .start-button-text{font-weight:bold;text-align:center;margin-top:30px;}
 .replay{position:absolute;right:10px;bottom:10px;padding:5px 10px;background:yellow;border-radius:10px;}
@@ -50,39 +50,39 @@
 	.game-wrap{margin-top:-17px;transform:translatex(-50%)scale(0.95);}
 	.game-block{height:676px;}
 }
-@media screen and (max-width:409px) {
+@media screen and (max-width:499px) {
 	.game-wrap{margin-top:-34px;transform:translatex(-50%)scale(0.9);}
 	.game-block{height:642px;}
 }
-@media screen and (max-width:489px) {
+@media screen and (max-width:469px) {
 	.game-wrap{margin-top:-51px;transform:translatex(-50%)scale(0.85);}
 	.game-block{height:608px;}
 }
-@media screen and (max-width:469px) {
+@media screen and (max-width:439px) {
 	.game-wrap{margin-top:-68px;transform:translatex(-50%)scale(0.8);}
 	.game-block{height:574px;}
 }
-@media screen and (max-width:449px) {
+@media screen and (max-width:409px) {
 	.game-wrap{margin-top:-85px;transform:translatex(-50%)scale(0.75);}
 	.game-block{height:540px;}
 }
-@media screen and (max-width:429px) {
+@media screen and (max-width:379px) {
 	.game-wrap{margin-top:-102px;transform:translatex(-50%)scale(0.7);}
 	.game-block{height:506px;}
 }
-@media screen and (max-width:309px) {
+@media screen and (max-width:349px) {
 	.game-wrap{margin-top:-119px;transform:translatex(-50%)scale(0.65);}
 	.game-block{height:472px;}
 }
-@media screen and (max-width:289px) {
+@media screen and (max-width:319px) {
 	.game-wrap{margin-top:-136px;transform:translatex(-50%)scale(0.6);}
 	.game-block{height:438px;}
 }
-@media screen and (max-width:269px) {
+@media screen and (max-width:289px) {
 	.game-wrap{margin-top:-153px;transform:translatex(-50%)scale(0.55);}
 	.game-block{height:404px;}
 }
-@media screen and (max-width:249px) {
+@media screen and (max-width:259px) {
 	.game-wrap{margin-top:-170px;transform:translatex(-50%)scale(0.5);}
 	.game-block{height:370px;}
 }
@@ -90,7 +90,7 @@
 	.game-wrap{margin-top:-187px;transform:translatex(-50%)scale(0.45);}
 	.game-block{height:336px;}
 }
-@media screen and (max-width:209px) {
+@media screen and (max-width:199px) {
 	.game-wrap{margin-top:-204px;transform:translatex(-50%)scale(0.4);}
 	.game-block{height:302px;}
 }
