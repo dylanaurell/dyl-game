@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Guess Your Number</title>
+		<link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1TTQqTpfiTrtffUdH6k7iRTRjH-tMbqYe"/>
+		<link rel="stylesheet" href="guess-your-number.css"/>
+		<link rel="stylesheet" href="header.css"/>
+		<script src="guess-your-number.js"></script>
+		<script src="header.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<button class="menu-button" onclick="menu_open()" tabindex="-1">
+				<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+					<path d="M 8 9 L 8 15 L 42 15 L 42 9 L 8 9 M 8 22 L 8 28 L 42 28 L 42 22 L 8 22 M 8 35 L 8 41 L 42 41 L 42 35 L 8 35">
+					</path>
+				</svg>
+			</button>
+			<a class="header-title-box" href="index.html" tabindex="-1">
+				<div class="header-title">Dyl Game</div>
+			</a>
+			<button class="dark-mode-button" onclick="dark_mode()" tabindex="-1">
+				<div class="dark-mode-off" id="dark-mode-off">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42 M 10 34 M 15 27 L 16 29 L 8 32 L 7 30 L 15 27 M 13 21 L 13 19 L 5 19 L 5 21 L 13 21 M 15 11 L 14 13 L 6 10 L 7 8 L 15 11 M 37 19 L 37 21 L 45 21 L 45 19 L 37 19 M 35 11 L 36 13 L 44 10 L 43 8 L 35 11 M 36 27 L 35 29 L 43 32 L 44 30 L 36 27">
+						</path>
+					</svg>
+				</div>
+				<div class="dark-mode-on" id="dark-mode-on">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42">
+						</path>
+					</svg>
+				</div>
+			</button>
+		</div>
+		<div class="header-block"></div>
+				<div class="menu" id="menu">
+			<div class="menu-home-setting">
+				<a class="menu-home" href="index.html">
+					<div class="menu-home-text">Home</div>
+				</a>
+				<div class="menu-setting">
+					<div class="menu-setting-text">Setting</div>
+				</div>
+			</div>
+			<div class="menu-content-wrap">
+				<div class="menu-content">
+					<a class="menu-content-link" href="brain-game-1.html">
+						<div class="menu-content-title">Brain Game 1</div>
+						<div class="menu-content-desc">Good For Brain</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-birthday.html">
+						<div class="menu-content-title">Guess Your Birthday</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-number.html">
+						<div class="menu-content-title">Guess Your Number</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu-outside" id="menu-outside" onclick="menu_close()"></div>
+		<div class="game-wrap">
+			<div class="game result" id="result">
+				<div class="result-title">Your Birthday Is</div>
+				<div class="result-number" id="result-number">0</div>
+				<div class="result-replay" onclick="replay()">
+					<div class="result-replay-text">replay</div>
+				</div>
+			</div>
+			<div class="game start" id="start">
+				<div class="start-text">Click Start To Guess Your<br>Birthday Date</div>
+				<div class="start-button" onclick="start()">
+					<div class="start-button-text">START</div>
+				</div>
+			</div>
+			<div class="game layer-1" id="layer-1">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">1</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">3</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">5</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">7</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">9</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">11</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">13</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">15</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">17</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">19</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">21</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">23</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">25</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">27</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">29</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">31</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">33</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">35</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">37</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">39</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">41</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">43</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">45</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">47</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">49</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">51</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">53</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">55</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">57</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">59</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">61</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">65</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">67</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">69</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">71</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">73</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">75</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">77</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">79</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">81</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">83</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">85</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">87</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">89</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">91</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">93</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">97</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">99</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">101</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">103</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">105</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">107</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">109</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">113</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">115</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">117</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">121</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_1_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_1_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-2" id="layer-2">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">2</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">3</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">6</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">7</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">10</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">11</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">14</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">15</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">18</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">19</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">22</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">23</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">26</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">27</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">30</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">31</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">34</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">35</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">38</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">39</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">42</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">43</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">46</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">47</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">50</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">51</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">54</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">55</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">58</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">59</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">62</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">66</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">67</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">70</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">71</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">74</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">75</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">78</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">79</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">82</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">83</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">86</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">87</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">90</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">91</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">94</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">98</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">99</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">102</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">103</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">106</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">107</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">110</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">114</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">115</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">118</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">122</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_2_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_2_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-3" id="layer-3">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">4</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">5</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">6</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">7</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">12</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">13</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">14</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">15</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">20</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">21</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">22</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">23</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">28</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">29</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">30</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">31</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">36</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">37</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">38</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">39</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">44</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">45</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">46</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">47</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">52</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">53</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">54</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">55</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">60</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">61</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">62</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">68</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">69</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">70</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">71</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">76</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">77</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">78</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">79</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">84</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">85</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">86</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">87</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">92</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">93</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">94</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">100</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">101</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">102</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">103</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">108</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">109</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">110</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">116</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">117</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">118</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">124</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_3_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_3_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-4" id="layer-4">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">8</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">9</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">10</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">11</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">12</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">13</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">14</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">15</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">24</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">25</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">26</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">27</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">28</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">29</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">30</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">31</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">40</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">41</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">42</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">43</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">44</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">45</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">46</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">47</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">56</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">57</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">58</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">59</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">60</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">61</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">62</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">72</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">73</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">74</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">75</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">76</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">77</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">78</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">79</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">88</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">89</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">90</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">91</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">92</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">93</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">94</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">104</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">105</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">106</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">107</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">108</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">109</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">110</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">120</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">121</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">122</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">124</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_4_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_4_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-5" id="layer-5">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">16</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">17</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">18</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">19</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">20</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">21</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">22</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">23</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">24</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">25</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">26</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">27</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">28</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">29</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">30</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">31</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">48</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">49</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">50</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">51</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">52</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">53</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">54</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">55</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">56</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">57</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">58</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">59</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">60</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">61</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">62</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">80</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">81</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">82</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">83</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">84</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">85</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">86</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">87</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">88</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">89</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">90</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">91</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">92</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">93</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">94</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">112</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">113</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">114</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">115</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">116</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">117</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">118</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">120</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">121</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">122</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">124</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_5_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_5_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-6" id="layer-6">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">32</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">33</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">34</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">35</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">36</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">37</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">38</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">39</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">40</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">41</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">42</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">43</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">44</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">45</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">46</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">47</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">48</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">49</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">50</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">51</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">52</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">53</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">54</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">55</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">56</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">57</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">58</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">59</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">60</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">61</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">62</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">63</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">96</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">97</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">98</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">99</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">100</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">101</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">102</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">103</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">104</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">105</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">106</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">107</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">108</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">109</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">110</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">112</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">113</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">114</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">115</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">116</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">117</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">118</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">120</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">121</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">122</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">124</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_6_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_6_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+			<div class="game layer-7" id="layer-7">
+				<div class="number">
+					<div class="number-box n1 na n-top n-left">	
+						<div class="number-box-text">64</div>
+					</div>	
+					<div class="number-box n2 na n-top">	
+						<div class="number-box-text">65</div>
+					</div>	
+					<div class="number-box n3 na n-top">	
+						<div class="number-box-text">66</div>
+					</div>	
+					<div class="number-box n4 na n-top">	
+						<div class="number-box-text">67</div>
+					</div>	
+					<div class="number-box n5 na n-top">	
+						<div class="number-box-text">68</div>
+					</div>	
+					<div class="number-box n6 na n-top">	
+						<div class="number-box-text">69</div>
+					</div>	
+					<div class="number-box n7 na n-top">	
+						<div class="number-box-text">70</div>
+					</div>	
+					<div class="number-box n8 na n-top n-right">	
+						<div class="number-box-text">71</div>
+					</div>	
+					<div class="number-box n1 nb n-left">	
+						<div class="number-box-text">72</div>
+					</div>	
+					<div class="number-box n2 nb">	
+						<div class="number-box-text">73</div>
+					</div>	
+					<div class="number-box n3 nb">	
+						<div class="number-box-text">74</div>
+					</div>	
+					<div class="number-box n4 nb">	
+						<div class="number-box-text">75</div>
+					</div>	
+					<div class="number-box n5 nb">	
+						<div class="number-box-text">76</div>
+					</div>	
+					<div class="number-box n6 nb">	
+						<div class="number-box-text">77</div>
+					</div>	
+					<div class="number-box n7 nb">	
+						<div class="number-box-text">78</div>
+					</div>	
+					<div class="number-box n8 nb n-right">	
+						<div class="number-box-text">79</div>
+					</div>	
+					<div class="number-box n1 nc n-left">	
+						<div class="number-box-text">80</div>
+					</div>	
+					<div class="number-box n2 nc">	
+						<div class="number-box-text">81</div>
+					</div>	
+					<div class="number-box n3 nc">	
+						<div class="number-box-text">82</div>
+					</div>	
+					<div class="number-box n4 nc">	
+						<div class="number-box-text">83</div>
+					</div>	
+					<div class="number-box n5 nc">	
+						<div class="number-box-text">84</div>
+					</div>	
+					<div class="number-box n6 nc">	
+						<div class="number-box-text">85</div>
+					</div>	
+					<div class="number-box n7 nc">	
+						<div class="number-box-text">86</div>
+					</div>	
+					<div class="number-box n8 nc n-right">	
+						<div class="number-box-text">87</div>
+					</div>	
+					<div class="number-box n1 nd n-left">	
+						<div class="number-box-text">88</div>
+					</div>	
+					<div class="number-box n2 nd">	
+						<div class="number-box-text">89</div>
+					</div>	
+					<div class="number-box n3 nd">	
+						<div class="number-box-text">90</div>
+					</div>	
+					<div class="number-box n4 nd">	
+						<div class="number-box-text">91</div>
+					</div>	
+					<div class="number-box n5 nd">	
+						<div class="number-box-text">92</div>
+					</div>	
+					<div class="number-box n6 nd">	
+						<div class="number-box-text">93</div>
+					</div>	
+					<div class="number-box n7 nd">	
+						<div class="number-box-text">94</div>
+					</div>	
+					<div class="number-box n8 nd n-right">	
+						<div class="number-box-text">95</div>
+					</div>	
+					<div class="number-box n1 ne n-left">	
+						<div class="number-box-text">96</div>
+					</div>	
+					<div class="number-box n2 ne">	
+						<div class="number-box-text">97</div>
+					</div>	
+					<div class="number-box n3 ne">	
+						<div class="number-box-text">98</div>
+					</div>	
+					<div class="number-box n4 ne">	
+						<div class="number-box-text">99</div>
+					</div>	
+					<div class="number-box n5 ne">	
+						<div class="number-box-text">100</div>
+					</div>	
+					<div class="number-box n6 ne">	
+						<div class="number-box-text">101</div>
+					</div>	
+					<div class="number-box n7 ne">	
+						<div class="number-box-text">102</div>
+					</div>	
+					<div class="number-box n8 ne n-right">	
+						<div class="number-box-text">103</div>
+					</div>	
+					<div class="number-box n1 nf n-left">	
+						<div class="number-box-text">104</div>
+					</div>	
+					<div class="number-box n2 nf">	
+						<div class="number-box-text">105</div>
+					</div>	
+					<div class="number-box n3 nf">	
+						<div class="number-box-text">106</div>
+					</div>	
+					<div class="number-box n4 nf">	
+						<div class="number-box-text">107</div>
+					</div>	
+					<div class="number-box n5 nf">	
+						<div class="number-box-text">108</div>
+					</div>	
+					<div class="number-box n6 nf">	
+						<div class="number-box-text">109</div>
+					</div>	
+					<div class="number-box n7 nf">	
+						<div class="number-box-text">110</div>
+					</div>	
+					<div class="number-box n8 nf n-right">	
+						<div class="number-box-text">111</div>
+					</div>	
+					<div class="number-box n1 ng n-left">	
+						<div class="number-box-text">112</div>
+					</div>	
+					<div class="number-box n2 ng">	
+						<div class="number-box-text">113</div>
+					</div>	
+					<div class="number-box n3 ng">	
+						<div class="number-box-text">114</div>
+					</div>	
+					<div class="number-box n4 ng">	
+						<div class="number-box-text">115</div>
+					</div>	
+					<div class="number-box n5 ng">	
+						<div class="number-box-text">116</div>
+					</div>	
+					<div class="number-box n6 ng">	
+						<div class="number-box-text">117</div>
+					</div>	
+					<div class="number-box n7 ng">	
+						<div class="number-box-text">118</div>
+					</div>	
+					<div class="number-box n8 ng n-right">	
+						<div class="number-box-text">119</div>
+					</div>	
+					<div class="number-box n1 nh n-left n-bottom">	
+						<div class="number-box-text">120</div>
+					</div>	
+					<div class="number-box n2 nh n-bottom">	
+						<div class="number-box-text">121</div>
+					</div>	
+					<div class="number-box n3 nh n-bottom">	
+						<div class="number-box-text">122</div>
+					</div>	
+					<div class="number-box n4 nh n-bottom">	
+						<div class="number-box-text">123</div>
+					</div>	
+					<div class="number-box n5 nh n-bottom">	
+						<div class="number-box-text">124</div>
+					</div>	
+					<div class="number-box n6 nh n-bottom">	
+						<div class="number-box-text">125</div>
+					</div>	
+					<div class="number-box n7 nh n-bottom">	
+						<div class="number-box-text">126</div>
+					</div>	
+					<div class="number-box n8 nh n-bottom n-right">	
+						<div class="number-box-text">127</div>
+					</div>	
+				</div>
+				<div class="question">Is There Your Number</div>
+				<div class="yes" onclick="layer_7_yes()">
+					<div class="button-text">YES</div>
+				</div>
+				<div class="no" onclick="layer_7_no()">
+					<div class="button-text">NO</div>
+				</div>
+				<div class="replay" onclick="replay()">
+					<div class="button-text">replay</div>
+				</div>
+			</div>
+		</div>
+		<div class="game-block"></div>
+	</body>
+</html>
