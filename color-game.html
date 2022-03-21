@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Color Game</title>
+		<link rel="shortcut icon" href="dylanlogo.png"/>
+		<link rel="stylesheet" href="color-game.css"/>
+		<link rel="stylesheet" href="header.css"/>
+		<script src="color-game.js"></script>
+		<script src="color-game-randomize.js"></script>
+		<script src="header.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="menu-button" onclick="menu_open()" tabindex="-1">
+				<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+					<path d="M 8 9 L 8 15 L 42 15 L 42 9 L 8 9 M 8 22 L 8 28 L 42 28 L 42 22 L 8 22 M 8 35 L 8 41 L 42 41 L 42 35 L 8 35">
+					</path>
+				</svg>
+			</div>
+			<a class="header-title-box" href="index.html" tabindex="-1">
+				<div class="header-title" id="coba">Dyl Game</div>
+			</a>
+			<div class="dark-mode-button" onclick="dark_mode()" tabindex="-1">
+				<div class="dark-mode-off" id="dark-mode-off">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42 M 10 34 M 15 27 L 16 29 L 8 32 L 7 30 L 15 27 M 13 21 L 13 19 L 5 19 L 5 21 L 13 21 M 15 11 L 14 13 L 6 10 L 7 8 L 15 11 M 37 19 L 37 21 L 45 21 L 45 19 L 37 19 M 35 11 L 36 13 L 44 10 L 43 8 L 35 11 M 36 27 L 35 29 L 43 32 L 44 30 L 36 27">
+						</path>
+					</svg>
+				</div>
+				<div class="dark-mode-on" id="dark-mode-on">
+					<svg class="header-icon" viewBox="0 0 50 50" focusable="false">
+						<path d="M 15 18 a 10 10 90 1 1 20 0 a 10 10 90 1 1 -20 0 M 15.8348 22 L 21 35 L 29 35 L 34.1652 22 L 15.8348 22 M 15.8348 22 L 19 30 L 31 30 L 34.1652 22 L 15.8348 22 M 22 36 C 21 36 21 37 22 37 L 28 37 C 29 37 29 36 28 36 L 22 36 M 22 38 C 21 38 21 39 22 39 L 28 39 C 29 39 29 38 28 38 L 28 38 L 22 38 L 22 38 M 23 40 C 22 40 22 41 23 41 L 27 41 C 28 41 28 40 27 40 L 27 40 L 23 40 L 23 40 M 24 42 L 24 42 L 26 42 C 26 41 27 41 27 41 L 23 41 C 24 41 24 41.6667 24 42">
+						</path>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="header-block"></div>
+		<div class="menu" id="menu">
+			<div class="menu-home-setting">
+				<a class="menu-home" href="index.html">
+					<div class="menu-home-text">Home</div>
+				</a>
+				<div class="menu-setting">
+					<div class="menu-setting-text">Setting</div>
+				</div>
+			</div>
+			<div class="menu-content-wrap">
+				<div class="menu-content">
+					<a class="menu-content-link" href="brain-game-1.html">
+						<div class="menu-content-title">Brain Game 1</div>
+						<div class="menu-content-desc">Good For Brain</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-birthday.html">
+						<div class="menu-content-title">Guess Your Birthday</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-number.html">
+						<div class="menu-content-title">Guess Your Number</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="guess-your-name.html">
+						<div class="menu-content-title">Guess Your Name</div>
+						<div class="menu-content-desc">Little Magic</div>
+					</a>
+				</div>
+				<div class="menu-content">
+					<a class="menu-content-link" href="color-game.html">
+						<div class="menu-content-title">Color Game</div>
+						<div class="menu-content-desc">Test Your Eyes</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="menu-outside" id="menu-outside" onclick="menu_close()"></div>
+		<div class="game-wrap">
+			<div class="game layer-start" id="layer-start">
+				<div class="start-text">Color Game</div>
+				<div class="start-button" onclick="start()">
+					<div class="start-button-text">START</div>
+				</div>
+			</div>
+			<div class="game layer-question" id="layer-question">
+				<div class="question-text">Click The Circle With A Different Color</div>
+				<div class="question-button" onclick="go(); start_timer()">
+					<div class="question-button-text">GO</div>
+				</div>
+			</div>
+			<div class="game layer-2x2" id="layer-2x2">
+				<div class="go-text">Part 1 (4)</div>
+				<div class="go-button" onclick="g_2()">
+					<div class="go-button-text">GO</div>
+				</div>
+			</div>
+			<div class="game layer-2-1" id="layer-2-1">
+				<div class="b2 b2t-1 b2l-1">
+					<div class="c2 bc-2-1-n" onclick="n_2_1()"></div>
+				</div>
+				<div class="b2 b2t-1 b2l-2">
+					<div class="c2 bc-2-1-n" onclick="n_2_1()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-1">
+					<div class="c2 bc-2-1-n" onclick="n_2_1()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-2">
+					<div class="c2 bc-2-1-n" onclick="n_2_1()"></div>
+				</div>
+				<div class="b2" id="b-2-1">
+					<div class="c2 bc-2-1-y" onclick="y_2_1()"></div>
+				</div>
+			</div>
+			<div class="game layer-2-2" id="layer-2-2">
+				<div class="b2 b2t-1 b2l-1">
+					<div class="c2 bc-2-2-n" onclick="n_2_2()"></div>
+				</div>
+				<div class="b2 b2t-1 b2l-2">
+					<div class="c2 bc-2-2-n" onclick="n_2_2()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-1">
+					<div class="c2 bc-2-2-n" onclick="n_2_2()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-2">
+					<div class="c2 bc-2-2-n" onclick="n_2_2()"></div>
+				</div>
+				<div class="b2" id="b-2-2">
+					<div class="c2 bc-2-2-y" onclick="y_2_2()"></div>
+				</div>
+			</div>
+			<div class="game layer-2-3" id="layer-2-3">
+				<div class="b2 b2t-1 b2l-1">
+					<div class="c2 bc-2-3-n" onclick="n_2_3()"></div>
+				</div>
+				<div class="b2 b2t-1 b2l-2">
+					<div class="c2 bc-2-3-n" onclick="n_2_3()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-1">
+					<div class="c2 bc-2-3-n" onclick="n_2_3()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-2">
+					<div class="c2 bc-2-3-n" onclick="n_2_3()"></div>
+				</div>
+				<div class="b2" id="b-2-3">
+					<div class="c2 bc-2-3-y" onclick="y_2_3()"></div>
+				</div>
+			</div>
+			<div class="game layer-2-4" id="layer-2-4">
+				<div class="b2 b2t-1 b2l-1">
+					<div class="c2 bc-2-4-n" onclick="n_2_4()"></div>
+				</div>
+				<div class="b2 b2t-1 b2l-2">
+					<div class="c2 bc-2-4-n" onclick="n_2_4()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-1">
+					<div class="c2 bc-2-4-n" onclick="n_2_4()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-2">
+					<div class="c2 bc-2-4-n" onclick="n_2_4()"></div>
+				</div>
+				<div class="b2" id="b-2-4">
+					<div class="c2 bc-2-4-y" onclick="y_2_4()"></div>
+				</div>
+			</div>
+			<div class="game layer-2-5" id="layer-2-5">
+				<div class="b2 b2t-1 b2l-1">
+					<div class="c2 bc-2-5-n" onclick="n_2_5()"></div>
+				</div>
+				<div class="b2 b2t-1 b2l-2">
+					<div class="c2 bc-2-5-n" onclick="n_2_5()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-1">
+					<div class="c2 bc-2-5-n" onclick="n_2_5()"></div>
+				</div>
+				<div class="b2 b2t-2 b2l-2">
+					<div class="c2 bc-2-5-n" onclick="n_2_5()"></div>
+				</div>
+				<div class="b2" id="b-2-5">
+					<div class="c2 bc-2-5-y" onclick="y_2_5()"></div>
+				</div>
+			</div>
+			<div class="game layer-3x3" id="layer-3x3">
+				<div class="go-text">Part 2 (9)</div>
+				<div class="go-button" onclick="g_3()">
+					<div class="go-button-text">GO</div>
+				</div>
+			</div>
+			<div class="game layer-3-1" id="layer-3-1">
+				<div class="b3 b3t-1 b3l-1">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-2">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-3">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-1">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-2">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-3">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-1">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-2">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-3">
+					<div class="c3 bc-3-1-n" onclick="n_3_1()"></div>
+				</div>
+				<div class="b3" id="b-3-1">
+					<div class="c3 bc-3-1-y" onclick="y_3_1()"></div>
+				</div>
+			</div>
+			<div class="game layer-3-2" id="layer-3-2">
+				<div class="b3 b3t-1 b3l-1">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-2">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-3">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-1">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-2">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-3">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-1">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-2">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-3">
+					<div class="c3 bc-3-2-n" onclick="n_3_2()"></div>
+				</div>
+				<div class="b3" id="b-3-2">
+					<div class="c3 bc-3-2-y" onclick="y_3_2()"></div>
+				</div>
+			</div>
+			<div class="game layer-3-3" id="layer-3-3">
+				<div class="b3 b3t-1 b3l-1">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-2">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-3">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-1">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-2">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-3">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-1">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-2">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-3">
+					<div class="c3 bc-3-3-n" onclick="n_3_3()"></div>
+				</div>
+				<div class="b3" id="b-3-3">
+					<div class="c3 bc-3-3-y" onclick="y_3_3()"></div>
+				</div>
+			</div>
+			<div class="game layer-3-4" id="layer-3-4">
+				<div class="b3 b3t-1 b3l-1">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-2">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-3">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-1">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-2">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-3">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-1">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-2">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-3">
+					<div class="c3 bc-3-4-n" onclick="n_3_4()"></div>
+				</div>
+				<div class="b3" id="b-3-4">
+					<div class="c3 bc-3-4-y" onclick="y_3_4()"></div>
+				</div>
+			</div>
+			<div class="game layer-3-5" id="layer-3-5">
+				<div class="b3 b3t-1 b3l-1">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-2">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-1 b3l-3">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-1">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-2">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-2 b3l-3">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-1">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-2">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3 b3t-3 b3l-3">
+					<div class="c3 bc-3-5-n" onclick="n_3_5()"></div>
+				</div>
+				<div class="b3" id="b-3-5">
+					<div class="c3 bc-3-5-y" onclick="y_3_5()"></div>
+				</div>
+			</div>
+			<div class="game layer-4x4" id="layer-4x4">
+				<div class="go-text">Part 3 (16)</div>
+				<div class="go-button" onclick="g_4()">
+					<div class="go-button-text">GO</div>
+				</div>
+			</div>
+			<div class="game layer-4-1" id="layer-4-1">
+				<div class="b4 b4t-1 b4l-1">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-2">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-3">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-4">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-1">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-2">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-3">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-4">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-1">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-2">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-3">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-4">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-1">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-2">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-3">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-4">	
+					<div class="c4 bc-4-1-n" onclick="n_4_1()"></div>
+				</div>	
+				<div class="b4" id="b-4-1">	
+					<div class="c4 bc-4-1-y" onclick="y_4_1()"></div>
+				</div>	
+			</div>
+			<div class="game layer-4-2" id="layer-4-2">
+				<div class="b4 b4t-1 b4l-1">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-2">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-3">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-4">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-1">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-2">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-3">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-4">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-1">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-2">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-3">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-4">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-1">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-2">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-3">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-4">	
+					<div class="c4 bc-4-2-n" onclick="n_4_2()"></div>
+				</div>	
+				<div class="b4" id="b-4-2">	
+					<div class="c4 bc-4-2-y" onclick="y_4_2()"></div>
+				</div>
+			</div>
+			<div class="game layer-4-3" id="layer-4-3">
+				<div class="b4 b4t-1 b4l-1">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-2">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-3">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-4">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-1">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-2">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-3">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-4">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-1">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-2">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-3">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-4">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-1">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-2">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-3">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-4">	
+					<div class="c4 bc-4-3-n" onclick="n_4_3()"></div>
+				</div>	
+				<div class="b4" id="b-4-3">	
+					<div class="c4 bc-4-3-y" onclick="y_4_3()"></div>
+				</div>	
+			</div>
+			<div class="game layer-4-4" id="layer-4-4">
+				<div class="b4 b4t-1 b4l-1">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-2">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-3">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-4">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-1">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-2">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-3">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-4">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-1">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-2">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-3">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-4">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-1">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-2">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-3">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-4">	
+					<div class="c4 bc-4-4-n" onclick="n_4_4()"></div>
+				</div>	
+				<div class="b4" id="b-4-4">	
+					<div class="c4 bc-4-4-y" onclick="y_4_4()"></div>
+				</div>	
+			</div>
+			<div class="game layer-4-5" id="layer-4-5">
+				<div class="b4 b4t-1 b4l-1">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-2">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-3">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-1 b4l-4">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-1">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-2">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-3">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-2 b4l-4">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-1">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-2">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-3">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-3 b4l-4">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-1">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-2">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-3">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4 b4t-4 b4l-4">	
+					<div class="c4 bc-4-5-n" onclick="n_4_5()"></div>
+				</div>	
+				<div class="b4" id="b-4-5">	
+					<div class="c4 bc-4-5-y" onclick="y_4_5()"></div>
+				</div>	
+			</div>
+			<div class="game layer-5x5" id="layer-5x5">
+				<div class="go-text">Part 4 (25)</div>
+				<div class="go-button" onclick="g_5()">
+					<div class="go-button-text">GO</div>
+				</div>
+			</div>
+			<div class="game layer-5-1" id="layer-5-1">
+				<div class="b5 b5t-1 b5l-1">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-2">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-3">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-4">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-5">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-1">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-2">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-3">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-4">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-5">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-1">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-2">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-3">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-4">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-5">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-1">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-2">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-3">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-4">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-5">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-1">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-2">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-3">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-4">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-5">	
+					<div class="c5 bc-5-1-n" onclick="n_5_1()"></div>
+				</div>	
+				<div class="b5" id="b-5-1">	
+					<div class="c5 bc-5-1-y" onclick="y_5_1()"></div>
+				</div>	
+			</div>
+			<div class="game layer-5-2" id="layer-5-2">
+				<div class="b5 b5t-1 b5l-1">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-2">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-3">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-4">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-5">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-1">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-2">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-3">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-4">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-5">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-1">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-2">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-3">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-4">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-5">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-1">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-2">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-3">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-4">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-5">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-1">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-2">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-3">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-4">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-5">	
+					<div class="c5 bc-5-2-n" onclick="n_5_2()"></div>
+				</div>	
+				<div class="b5" id="b-5-2">	
+					<div class="c5 bc-5-2-y" onclick="y_5_2()"></div>
+				</div>	
+			</div>
+			<div class="game layer-5-3" id="layer-5-3">
+				<div class="b5 b5t-1 b5l-1">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-2">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-3">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-4">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-5">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-1">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-2">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-3">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-4">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-5">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-1">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-2">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-3">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-4">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-5">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-1">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-2">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-3">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-4">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-5">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-1">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-2">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-3">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-4">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-5">	
+					<div class="c5 bc-5-3-n" onclick="n_5_3()"></div>
+				</div>	
+				<div class="b5" id="b-5-3">	
+					<div class="c5 bc-5-3-y" onclick="y_5_3()"></div>
+				</div>	
+			</div>
+			<div class="game layer-5-4" id="layer-5-4">
+				<div class="b5 b5t-1 b5l-1">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-2">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-3">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-4">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-5">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-1">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-2">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-3">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-4">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-5">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-1">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-2">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-3">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-4">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-5">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-1">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-2">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-3">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-4">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-5">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-1">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-2">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-3">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-4">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-5">	
+					<div class="c5 bc-5-4-n" onclick="n_5_4()"></div>
+				</div>	
+				<div class="b5" id="b-5-4">	
+					<div class="c5 bc-5-4-y" onclick="y_5_4()"></div>
+				</div>
+			</div>
+			<div class="game layer-5-5" id="layer-5-5">
+				<div class="b5 b5t-1 b5l-1">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-2">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-3">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-4">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-1 b5l-5">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-1">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-2">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-3">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-4">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-2 b5l-5">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-1">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-2">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-3">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-4">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-3 b5l-5">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-1">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-2">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-3">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-4">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-4 b5l-5">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-1">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-2">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-3">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-4">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5 b5t-5 b5l-5">	
+					<div class="c5 bc-5-5-n" onclick="n_5_5()"></div>
+				</div>	
+				<div class="b5" id="b-5-5">	
+					<div class="c5 bc-5-5-y" onclick="y_5_5()"></div>
+				</div>
+			</div>
+			<div class="game layer-score" id="layer-score">
+				<div class="score-text">Congratulation</div>
+				<div class="score-result score-true" id="result">0</div>
+				<div class="score-result score-timer" id="jam">00:00</div>
+			</div>
+		</div>
+	</body>
+</html>
