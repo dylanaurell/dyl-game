@@ -208,7 +208,6 @@ function g_5() {
 function n_5_1() {	
 	document.getElementById('layer-5-1').classList.add('opacity') ;
 	setTimeout(function() {document.getElementById('layer-5-1').classList.add('hide') ;}, 1000);
-	clearInterval(intervalop);
 }	
 function y_5_1() {	
 	document.getElementById('layer-5-1').classList.add('opacity') ;
@@ -217,12 +216,10 @@ function y_5_1() {
 	var score_after = document.getElementById("result").innerHTML;
 	var score = parseInt(score_after,10) + 1;
 	document.getElementById("result").innerHTML = score + "/20";
-	clearInterval(intervalop);
 }	
 function n_5_2() {	
 	document.getElementById('layer-5-2').classList.add('opacity') ;
 	setTimeout(function() {document.getElementById('layer-5-2').classList.add('hide') ;}, 1000);
-	clearInterval(intervalop);
 }	
 function y_5_2() {	
 	document.getElementById('layer-5-2').classList.add('opacity') ;
@@ -232,12 +229,10 @@ function y_5_2() {
 	var score_after = document.getElementById("result").innerHTML;
 	var score = parseInt(score_after,10) + 1;
 	document.getElementById("result").innerHTML = score + "/20";
-	clearInterval(intervalop);
 }	
 function n_5_3() {	
 	document.getElementById('layer-5-3').classList.add('opacity') ;
 	setTimeout(function() {document.getElementById('layer-5-3').classList.add('hide') ;}, 1000);
-	clearInterval(intervalop);
 }	
 function y_5_3() {	
 	document.getElementById('layer-5-3').classList.add('opacity') ;
@@ -246,12 +241,10 @@ function y_5_3() {
 	var score_after = document.getElementById("result").innerHTML;
 	var score = parseInt(score_after,10) + 1;
 	document.getElementById("result").innerHTML = score + "/20";
-	clearInterval(intervalop);
 }	
 function n_5_4() {	
 	document.getElementById('layer-5-4').classList.add('opacity') ;
 	setTimeout(function() {document.getElementById('layer-5-4').classList.add('hide') ;}, 1000);
-	clearInterval(intervalop);
 }	
 function y_5_4() {	
 	document.getElementById('layer-5-4').classList.add('opacity') ;
@@ -260,7 +253,6 @@ function y_5_4() {
 	var score_after = document.getElementById("result").innerHTML;
 	var score = parseInt(score_after,10) + 1;
 	document.getElementById("result").innerHTML = score + "/20";
-	clearInterval(intervalop);
 }	
 function n_5_5() {	
 	document.getElementById('layer-5-5').classList.add('opacity') ;
