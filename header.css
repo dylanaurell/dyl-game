@@ -26,10 +26,10 @@ body{margin:0;}
 .menu-home-setting{height:140px;border-bottom:1px solid lightgrey;}
 .menu-home{height:50px;width:240px;border-radius:0px 24px 24px 0px;cursor:pointer;position:absolute;top:20px;text-decoration:none;}
 .menu-home:hover{background-color:#f2f2f2;}
-.menu-home-text{top:11px;left:15px;position:absolute;font-size:20px;font-family:lacida handwritting, cursive;color:black;}
+.menu-home-text{top:11px;left:15px;position:absolute;font-size:20px;color:black;}
 .menu-setting{height:50px;width:240px;border-radius:0px 24px 24px 0px;cursor:pointer;position:absolute;top:70px;}
 .menu-setting:hover{background-color:#f2f2f2;}
-.menu-setting-text{top:11px;left:15px;position:absolute;font-size:20px;font-family:lacida handwritting, cursive;color:black;}
+.menu-setting-text{top:11px;left:15px;position:absolute;font-size:20px;color:black;}
 .menu-outside{position:fixed;width:100%;height:100%;top:0px;left:0px;z-index:4;display:none;}
 .menu-content-wrap{margin-top:20px;margin-bottom:20px;}
 .menu-content{height:50px;width:240px;border-radius:0px 24px 24px 0px;cursor:pointer;}
