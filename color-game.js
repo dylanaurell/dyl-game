@@ -225,7 +225,6 @@ function y_5_2() {
 	document.getElementById('layer-5-2').classList.add('opacity') ;
 	document.getElementById('b-5-2').classList.add('hide') ;
 	setTimeout(function() {document.getElementById('layer-5-2').classList.add('hide') ;}, 1000);
-	clearInterval(intervalop);
 	var score_after = document.getElementById("result").innerHTML;
 	var score = parseInt(score_after,10) + 1;
 	document.getElementById("result").innerHTML = score + "/20";
