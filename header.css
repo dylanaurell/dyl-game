@@ -21,7 +21,7 @@ body{margin:0;}
 
 
 /*menu*/
-.menu{width:250px;position:fixed;overflow:auto;top:0px;left:-250px;border-right:1px solid lightgrey;height:100%;z-index:5;background:white;opacity:0;transition:left 0.5s, opacity 0.5s;}
+.menu{width:250px;position:fixed;overflow:auto;top:0px;left:-250px;border-right:1px solid lightgrey;height:100%;z-index:5;background:white;opacity:0;transition:left 0.5s, opacity 0.5s;user-select:none;}
 .menu-animation{left:0px;opacity:1;}
 .menu-home-setting{height:140px;border-bottom:1px solid lightgrey;}
 .menu-home{height:50px;width:240px;border-radius:0px 24px 24px 0px;cursor:pointer;position:absolute;top:20px;text-decoration:none;}
